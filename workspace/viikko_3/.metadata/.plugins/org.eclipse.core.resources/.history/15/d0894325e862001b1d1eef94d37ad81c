@@ -1,0 +1,61 @@
+package h_3_3;
+
+import java.util.Scanner;
+
+public class Mainclass {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BottleDispenser BD = new BottleDispenser();
+		int selection;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("\n*** BOTTLE DISPENSER ***");
+		System.out.println("1) Add money to the machine");
+		System.out.println("2) Buy a bottle");
+		System.out.println("3) Take money out");
+		System.out.println("4) List bottles in the dispenser");
+		System.out.println("0) End");
+		System.out.println("Your choice: ");
+		selection = scan.nextInt();
+		
+		while (selection != 0) {
+			switch (selection){
+			
+			case 1:
+				BD.addMoney();
+				break;
+			case 2:
+				BD.buyBottle();
+				break;
+			case 3:
+				BD.returnMoney();
+				break;
+			case 4:
+				BD.listBottles();
+				break;
+			default:
+				break;
+			
+			}
+			System.out.println("\n*** BOTTLE DISPENSER ***");
+			System.out.println("1) Add money to the machine");
+			System.out.println("2) Buy a bottle");
+			System.out.println("3) Take money out");
+			System.out.println("4) List bottles in the dispenser");
+			System.out.println("0) End");
+			System.out.println("Your choice: ");
+			
+			selection = scan.nextInt();
+		
+		}
+		scan.close();
+	}
+
+}
+
+
+
+

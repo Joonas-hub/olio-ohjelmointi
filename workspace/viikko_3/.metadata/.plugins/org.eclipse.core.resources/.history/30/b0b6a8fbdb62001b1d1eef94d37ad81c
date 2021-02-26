@@ -1,0 +1,40 @@
+package h_3_1;
+
+public class BottleDispenser {
+    private int bottles;
+    private int money;
+    private int prize;
+    
+    public BottleDispenser() {
+        bottles = 5;
+        money = 0;
+        prize = 1;
+    }
+    
+    public void addMoney() {
+        money += 1;
+        System.out.println("Klink! Money was added into the machine!");
+    }
+    
+    public void buyBottle() {
+    	if (money < prize) {
+    		System.out.println("Add money first!");
+    	}
+    	else {
+    		if (bottles == 0) {
+    			System.out.println("Out of bottles!");
+    		}
+    		else {
+        bottles -= 1;
+        money = money - prize;
+        System.out.println("KACHUNK! Bottle appeared from the machine!");
+    	
+    		}
+    	}
+    }
+    
+    public void returnMoney() {
+        money = 0;
+        System.out.println("Klink klink!! All money gone!");
+    }
+}

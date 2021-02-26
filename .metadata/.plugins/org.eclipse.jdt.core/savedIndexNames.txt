@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+D:\Olio-ohjelmointi\.metadata\.plugins\org.eclipse.jdt.core
+3520980340.index

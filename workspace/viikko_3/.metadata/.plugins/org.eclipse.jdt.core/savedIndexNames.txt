@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+D:\Olio-ohjelmointi\viikko2\viikko_3\.metadata\.plugins\org.eclipse.jdt.core
+1688786195.index

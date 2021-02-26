@@ -1,0 +1,38 @@
+package h_3;
+
+public abstract class Account {
+	private String accountNumber = "";
+	private int money = 0;
+	
+	public Account(String accountNumber, int money) {
+		this.accountNumber = accountNumber;
+		this.money = money;
+	}
+	
+	public void withdraw(int money) {
+		if (this.money >= money) {
+			this.money = this.money - money;
+		}
+		else {
+			System.out.println("Not enough money!");
+		}
+	}
+	
+	public void deposit(int money) {
+		this.money = this.money + money;
+	}
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
+}
+
+class RegularAccount extends Account{
+	public RegularAccount(String accountNumber, int money) {
+		super(accountNumber, money);
+	}
+}

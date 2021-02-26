@@ -1,0 +1,19 @@
+ROSENCRANTZ AND ETHERNET
+by
+Vint Cerf
+
+All the world's a net! And all the data in it merely packets
+come to store-and-forward in the queues a while and then are
+heard no more. 'Tis a network waiting to be switched!
+
+To switch or not to switch? That is the question. Whether
+'tis wiser in the net to suffer the store and forward of
+stochastic networks or to raise up circuits against a sea
+of packets and, by dedication, serve them.
+
+To net, to switch. To switch, perchance to slip!
+Aye, there's the rub. For in that choice of switch,
+what loops may lurk, when we have shuffled through
+this Banyan net? Puzzles the will, initiates symposia,
+stirs endless debate and gives rise to uncontrolled
+flights of poetry beyond recompense!

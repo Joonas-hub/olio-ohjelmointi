@@ -1,0 +1,14 @@
+package h_3;
+
+public abstract class Account {
+	private String accountNumber = "";
+	private int money = 0;
+	
+	public void withdraw(int money) {
+		this.money = this.money - money;
+	}
+	
+	public void deposit(int money) {
+		this.money = this.money + money;
+	}
+}
