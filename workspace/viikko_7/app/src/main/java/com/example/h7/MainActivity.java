@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
             while ((s = br.readLine()) != null){
                 saveload.setText(s);
-                System.out.println("asdasdaassd");
+                
             }
             in.close();
         } catch (IOException e){
