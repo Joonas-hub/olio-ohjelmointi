@@ -1,4 +1,4 @@
-package com.example.h7_1;
+package com.example.h7;
 
 import org.junit.Test;
 
