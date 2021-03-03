@@ -18,11 +18,11 @@ public class BottleDispenser {
         bottles = 5;
         money = 0;
 
-        bottle_array.add(new Bottle("Pepsi Max", "Pepsi", 0.3, 0.5, 1.8));
-        bottle_array.add(new Bottle("Pepsi Max", "Pepsi", 0.3, 1.5, 2.2));
-        bottle_array.add(new Bottle("Coca-Cola Zero", "Coca-Cola", 0.3, 0.5, 2.0));
-        bottle_array.add(new Bottle("Coca-Cola Zero", "Coca-Cola", 0.3, 1.5, 2.5));
-        bottle_array.add(new Bottle("Fanta Zero", "Pepsi", 0.3, 0.5, 1.95));
+        bottle_array.add(new Bottle("Pepsi Max", "Pepsi", 0.3, 0.5, 1.8, bottles));
+        bottle_array.add(new Bottle("Pepsi Max", "Pepsi", 0.3, 1.5, 2.2, bottles));
+        bottle_array.add(new Bottle("Coca-Cola Zero", "Coca-Cola", 0.3, 0.5, 2.0, bottles));
+        bottle_array.add(new Bottle("Coca-Cola Zero", "Coca-Cola", 0.3, 1.5, 2.5, bottles));
+        bottle_array.add(new Bottle("Fanta Zero", "Pepsi", 0.3, 0.5, 1.95, bottles));
 
     }
 
@@ -35,26 +35,26 @@ public class BottleDispenser {
         System.out.println("Klink! Added more money!");
     }
 
-    public void buyBottle(int selection) {
+    public int buyBottle(int selection) {
 
         price = bottle_array.get(selection - 1).getPrice();
         if (money < price) {
             System.out.println("Add money first!");
+            return 2;
         }
         else {
-            if (bottles == 0) {
+            if (bottle_array.get(selection - 1).getAmount() == 0) {
                 System.out.println("Out of bottles!");
+                return 1;
             }
             else {
 
                 bottle_name = bottle_array.get(selection - 1).getName();
-                bottle_array.remove(selection - 1);
-                bottles -= 1;
+                bottle_array.get(selection - 1).remove();
+
                 money = money - price;
                 System.out.println("KACHUNK! " + bottle_name + " came out of the dispenser!");
-                if (money > 0) {
-                    //returnMoney();
-                }
+                return 0;
             }
         }
     }
@@ -78,5 +78,9 @@ public class BottleDispenser {
     }
     public double getMoney(){
         return money;
+    }
+
+    public ArrayList<Bottle> getBottleArray(){
+        return bottle_array;
     }
 }

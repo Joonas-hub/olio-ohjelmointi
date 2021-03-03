@@ -6,6 +6,7 @@ public class Bottle {
     private double total_energy;
     private double size;
     private double price;
+    private int amount;
 
     public Bottle(){
         name = "Pepsi Max";
@@ -13,13 +14,15 @@ public class Bottle {
         total_energy = 0.3;
         size = 0.5;
         price = 1.8;
+        amount = 1;
     }
-    public Bottle(String name, String manuf, double totE, double size, double prize){
+    public Bottle(String name, String manuf, double totE, double size, double prize, int amount){
         this.name = name;
         manufacturer = manuf;
         total_energy = totE;
         this.size = size;
         this.price = prize;
+        this.amount = amount;
     }
 
     public String getName(){
@@ -37,4 +40,6 @@ public class Bottle {
     public double getPrice() {
         return price;
     }
+    public int getAmount(){ return amount;}
+    public void remove(){amount -= 1;}
 }
