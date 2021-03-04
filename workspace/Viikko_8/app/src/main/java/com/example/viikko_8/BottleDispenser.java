@@ -13,7 +13,7 @@ public class BottleDispenser {
     private double price;
     private int j;
     private static BottleDispenser bd = new BottleDispenser();
-
+    private String lastPurchase = "";
     private BottleDispenser() {
         bottles = 5;
         money = 0;
@@ -54,6 +54,7 @@ public class BottleDispenser {
 
                 money = money - price;
                 System.out.println("KACHUNK! " + bottle_name + " came out of the dispenser!");
+                lastPurchase = bottle_name + "\t" + String.valueOf(price) + " €";
                 return 0;
             }
         }
@@ -83,4 +84,6 @@ public class BottleDispenser {
     public ArrayList<Bottle> getBottleArray(){
         return bottle_array;
     }
+
+    public String getLastPurchase(){ return lastPurchase; }
 }
