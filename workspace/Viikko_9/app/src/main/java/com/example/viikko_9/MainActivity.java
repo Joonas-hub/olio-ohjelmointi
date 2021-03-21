@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (theaterSelection != 0){
+                if (theaterSelection != 0 && searchView.getText().length() == 0){
                     updateRecyclerView(theaters, theaterSelection);
                 }
             }
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (theaterSelection != 0){
+                if (theaterSelection != 0 && searchView.getText().length() == 0){
                     updateRecyclerView(theaters, theaterSelection);
                 }
             }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (theaterSelection != 0){
+                if (theaterSelection != 0 && searchView.getText().length() == 0){
                     updateRecyclerView(theaters, theaterSelection);
                 }
             }
